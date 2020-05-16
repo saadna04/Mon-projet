@@ -49,6 +49,12 @@
                 </ul>                
             </div>
         </nav> 
+        <script type="text/javascript">
+        function getFileName() {
+        	   return document.getElementById("file").value;
+        	}
+        	document.getElementById("filePath").innerHTML = getFileName();
+        </script>
   <div class="card  text-white">
 							<div class="card-header bg-dark">
 								<h3 class="mb-0">Execute ssis package</h3>
@@ -58,11 +64,12 @@
 									novalidate="" action="ssisServlet" method="POST" >
 									<div class="form-group">
 										<label for="uname1">file</label> 
-										<input type="file" class="form-control" name="file" id="file" required="" placeholder="Enter file" >
+										<input type="file" class="form-control" name="file" id="file" required="" placeholder="Enter file"  >
 										<!--div class="invalid-feedback">Please enter your username or email</div-->
+										<p id="filePath"></p>
 									</div>
 									<!--strong style="color: red">${msg}</strong-->
-									<button type="submit" class="btn btn-primary btn-lg float-right" id="btnLogin">
+									<button type="submit" class="btn btn-primary btn-lg float-right" id="btnLogin" onClick=getFileName()>
 									<span class="glyphicon glyphicon-repeat"></span> execute</button>
 								</form>
 							</div>

@@ -29,7 +29,7 @@ public class ssisServlet extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-		String path = request.getParameter("file");
+		String path = request.getParameter("filePath");
 
 		try {
 			SSISDAO.run_ssis(path);
