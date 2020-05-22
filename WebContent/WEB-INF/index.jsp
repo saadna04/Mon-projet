@@ -30,7 +30,7 @@
   <div class="card  text-white">
 							<div class="card-header">
 								<!-- h3 class="mb-0">Login</h3-->
-								<img alt="" src="per.jpeg" width="150" height="50" style="text-align: center">
+								<img alt="" src="per.jpeg" width="150" height="50" class="float-sm-left">
 							</div>
 							<div class="card-body">
 								<form class="form" role="form" autocomplete="off" id="loginForm"
@@ -54,7 +54,7 @@
 									<strong style="color: red">${msg}</strong>
 
 									<button type="submit"
-										class="btn btn-primary btn-lg " id="btnLogin">Connexion</button>
+										class="btn btn-primary btn-lg float-none " id="btnLogin">Login</button>
 								</form>
 							</div>
 							<!--/card-body-->

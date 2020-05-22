@@ -18,7 +18,7 @@
  window.onload = function() {
  document.getElementById("Save").onclick = function fun() {
  var x = document.forms["myForm"]["catalog"].value;
- var y = document.forms["myForm"]["cube"].value;
+// var y = document.forms["myForm"]["cube"].value;
   var str = '<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"><Body>'+ 
            ' <Execute xmlns="urn:schemas-microsoft-com:xml-analysis"><Command>'+ 
           '  <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">'+ 
@@ -35,7 +35,7 @@
 		'xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400">'+ 
 			'<Object>'+ 
 		'		<DatabaseID>'+x+'</DatabaseID>'+ 
-		'		<CubeID>'+y+'</CubeID>'+ 
+		//'		<CubeID>'+y+'</CubeID>'+ 
 		'	</Object>'+ 
 		'	<Type>ProcessFull</Type>'+ 
 		'	<WriteBackTableCreation>UseExisting</WriteBackTableCreation>'+ 
@@ -99,7 +99,7 @@
 		
  						 <div class="card  text-white">
 							<div class="card-header bg-primary">
-								<h3 class="mb-0">Traiter Cube</h3>
+								<h3 class="mb-0">Traiter Base</h3>
 							</div>
 							<div class="card-body">
 								<form class="form" role="form" autocomplete="off" id="#" name="myForm" novalidate="" action="#" method="#">
@@ -109,12 +109,6 @@
 										 <input type="text" class="form-control" name="catalog" id="catalog" required="" placeholder="Entrer Nom base">
 										<!--div class="invalid-feedback">Please enter your jobl</div-->
 									</div>
-									<div class="form-group">
-										<!--label for="uname1" style="color: black">Cube</label--> 
-										<input type="text" class="form-control" name="cube" id="cube" required="" placeholder="Entrer Nom cube ">
-										<!--div class="invalid-feedback">Please enter your cube</div-->
-									</div>
-									<!--strong style="color: red">${msg}</strong-->
 
 									<button type="submit" class="btn btn-primary btn-lg float-left"   id="Save" onclick="f1()"> 
 										<span class="glyphicon glyphicon-refresh"></span> Process</button>

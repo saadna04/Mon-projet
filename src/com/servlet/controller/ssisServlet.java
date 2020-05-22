@@ -34,7 +34,7 @@ public class ssisServlet extends HttpServlet {
 		try {
 			SSISDAO.run_ssis(path);
 			//out.print("<p ><h1 style=\"color:Green \">Processing sucess</h1></p>");
-
+			
 			this.getServletContext().getRequestDispatcher("/WEB-INF/view/ssis.jsp").forward(request, response);
 
 		} catch (Exception e) {
